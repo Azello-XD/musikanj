@@ -77,13 +77,12 @@ MAINTENANCE_COMMAND : ["maintenance"]
 LOGGER_COMMAND : ["logger"]
 
 #Heroku
-GETLOG_COMMAND : ["get_log"]
-GETVAR_COMMAND : ["get_var"]
-DELVAR_COMMAND : ["del_var"]
-SETVAR_COMMAND : ["set_var"]
+GETLOG_COMMAND : ["getlog"]
+GETVAR_COMMAND : ["anukuhehe"]
+DELVAR_COMMAND : ["anumuhehe"]
+SETVAR_COMMAND : ["anumuanukubersatu"]
 USAGE_COMMAND : ["usage"]
 VARS_COMMAND : ["vars", "config"]
-
 
 #Basic Bot Commands
 UPDATE_COMMAND : ["update"]
