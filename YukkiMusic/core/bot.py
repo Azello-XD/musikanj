@@ -48,8 +48,8 @@ class YukkiBot(Client):
                 await self.set_bot_commands(
                     [
                         BotCommand("sg", "To check history name"),
-                        BotCommand("all", "Mention all group members"),
-                        BotCommand("stoptag", "Stopped mention"),
+                        #BotCommand("all", "Mention all group members"),
+                        #BotCommand("stoptag", "Stopped mention"),
                         BotCommand("ping", "Check that bot is alive or dead"),
                         BotCommand("play", "Starts playing the requested song"),
                         BotCommand("skip", "Moves to the next track in queue"),
