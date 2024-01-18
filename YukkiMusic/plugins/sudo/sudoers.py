@@ -114,9 +114,7 @@ async def sudoers_list(client, message: Message, _):
         try:
             user = await app.get_users(x)
             user = (
-                user.mention
-                if not user.username
-                else user.username
+                user.first_name if not user.mention else user.mention
             )
             count += 1
         except Exception:
@@ -128,7 +126,7 @@ async def sudoers_list(client, message: Message, _):
             try:
                 user = await app.get_users(user_id)
                 user = (
-                    user.mention
+                    user.first_name
                     if not user.mention
                     else user.mention
                 )
