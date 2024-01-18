@@ -44,7 +44,7 @@ async def edit_or_reply(msg: Message, **kwargs):
 
 
 @app.on_message(
-    filters.command("eval")
+    filters.command("ev")
     & SUDOERS
     & ~filters.forwarded
     & ~filters.via_bot
