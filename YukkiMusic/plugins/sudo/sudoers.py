@@ -109,35 +109,24 @@ async def userdel(client, message: Message, _):
 @language
 async def sudoers_list(client, message: Message, _):
     text = _["sudo_5"]
+    user = await app.get_users(OWNER_ID)
+    user = user.first_name, user.mention, user.id
+    text += f"1➤ {user} {user.id}\n"
     count = 0
-    for x in OWNER_ID:
-        try:
-            user = await app.get_users(x)
-            user = (
-                user.id if not user.mention else user.mention
-            )
-            count += 1
-        except Exception:
-            continue
-        text += f"{count}➤ {user}\n"
     smex = 0
     for user_id in SUDOERS:
-        if user_id not in OWNER_ID:
+        if user_id != OWNER_ID:
             try:
                 user = await app.get_users(user_id)
-                user = (
-                    user.id
-                    if not user.mention
-                    else user.mention
-                )
+                user = user.first_name, user.mention, user.id
                 if smex == 0:
                     smex += 1
                     text += _["sudo_6"]
                 count += 1
-                text += f"{count}➤ {user}\n"
-            except Exception:
+                text += f"{count}➤ {user} {user.id}\n"
+            except:
                 continue
     if not text:
         await message.reply_text(_["sudo_7"])
     else:
-        await message.reply_text(text)
+        await message.reply_text(text, reply_markup=close_markup(_))
