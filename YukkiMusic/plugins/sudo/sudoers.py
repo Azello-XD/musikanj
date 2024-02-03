@@ -118,7 +118,7 @@ async def sudoers_list(client, message: Message, _):
         if user_id != OWNER_ID:
             try:
                 user = await app.get_users(user_id)
-                user = user = f"<a href=tg://user?id={user.id}>{user.first_name} {user.last_name}</a> > <code>{user.id}</code>
+                user = user = f"<a href=tg://user?id={user.id}>{user.first_name} {user.last_name}</a> > <code>{user.id}</code>"
                 if smex == 0:
                     smex += 1
                     text += _["sudo_6"]
