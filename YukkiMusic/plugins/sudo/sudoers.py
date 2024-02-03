@@ -110,7 +110,7 @@ async def userdel(client, message: Message, _):
 async def sudoers_list(client, message: Message, _):
     text = _["sudo_5"]
     user = await app.get_users(OWNER_ID)
-    user = user.first_name, user.mention, user.id
+    user = f"<a href=tg://user?id={user.id}>{user.first_name} {user.last_name}</a> > <code>{user.id}</code>"
     text += f"1➤ {user} {user.id}\n"
     count = 0
     smex = 0
