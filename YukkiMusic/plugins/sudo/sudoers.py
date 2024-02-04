@@ -126,8 +126,7 @@ async def sudoers_list(client, message: Message, _):
             try:
                 user = await app.get_users(user_id)
                 user = (
-                    user.id
-                    user.mention
+                    user.id > user.mention
                 )
                 if smex == 0:
                     smex += 1
