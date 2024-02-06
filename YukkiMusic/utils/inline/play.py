@@ -16,16 +16,20 @@ from pyrogram.types import InlineKeyboardButton
 from YukkiMusic.utils.formatters import time_to_seconds
 
 selections = [
-    "◉—————————",
-    "—◉————————",
-    "——◉———————",
-    "———◉——————",
-    "————◉—————",
-    "—————◉————",
-    "——————◉———",
-    "———————◉——",
-    "————————◉—",
-    "—————————◉",
+    "KAZU┅┅┅┅┅┅",
+    "┅KAZU┅┅┅┅┅",
+    "┅┅KAZU┅┅┅┅",
+    "┅┅┅KAZU┅┅┅",
+    "┅┅┅┅KAZU┅┅",
+    "┅┅┅┅┅KAZU┅",
+    "┅┅┅┅┅┅KAZU",
+    "KAZU┅┅┅┅┅┅",
+    "┅KAZU┅┅┅┅┅",
+    "┅┅KAZU┅┅┅┅",
+    "┅┅┅KAZU┅┅┅",
+    "┅┅┅┅KAZU┅┅",
+    "┅┅┅┅┅KAZU┅",
+    "┅┅┅┅┅┅KAZU",
 ]
 
 
@@ -70,7 +74,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         [
             InlineKeyboardButton(
                 text=_["PL_B_2"],
-                url="https://t.me/Flukosaa",
+                url="https://t.me/Html12text",
             ),
             InlineKeyboardButton(
                 text=_["PL_B_3"],
