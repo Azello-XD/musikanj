@@ -22,5 +22,5 @@ spotipy
 tgcrypto
 youtube-search
 youtube-search-python
-yt-dlp -U
+yt-dlp
 telethon 
