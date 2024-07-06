@@ -11,7 +11,7 @@ lyricsgenius
 motor==3.0.0
 pillow==10.0.1
 psutil
-py-tgcalls==2.0.2
+py-tgcalls==0.9.1
 pykeyboard
 pyrogram==2.0.106
 pymongo
