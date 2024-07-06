@@ -1,4 +1,5 @@
 aiofiles
+av==12.2.0
 aiohttp
 asyncio
 dnspython
@@ -10,7 +11,7 @@ lyricsgenius
 motor==3.0.0
 pillow==10.0.1
 psutil
-py-tgcalls==0.9.7
+py-tgcalls==3.0.0dev24
 pykeyboard
 pyrogram==2.0.106
 pymongo
